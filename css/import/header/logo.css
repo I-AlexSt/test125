@@ -1,0 +1,15 @@
+.logo {
+  display: flex;
+  justify-content: center;
+  padding-top: 9px;
+  padding-bottom: 6px;
+}
+.logo__link {
+  display: block;
+  padding: 20px;
+  outline: 1px solid #fff;
+}
+.logo__link img {
+  display: block;
+  max-width: 100%;
+}

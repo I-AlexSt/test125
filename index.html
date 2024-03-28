@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html class="html" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+<body class="body">
+
+  <!-- header -->
+  <!-- Присваиваем клас link-curren ссылке текущей страницы для реализации разных надписей на закрытом моб. меню и подчеркивания. Фоновое изобр. на планшете и декстопе разное -->
+  <header class="header header-index header-form header-photo">
+
+    <!-- logo -->
+    <!-- Делаем 2 версии для главной стр. и остальных(фоновое изобр. белый выступ к низу logo-bg-bottom.svg п центру) из-за выступа внизу -->
+    <div class="logo">
+      <a class="logo__link" href="#!">
+        <picture>
+          <source srcset="img/header-footer/logo-desktop.svg" media="(min-width: 1200px)" width="370" height="153">
+          <source srcset="img/header-footer/logo-tablet.svg" media="(min-width: 768px)" width="370" height="100">
+          <img class="logo__image" src="img/header-footer/logo-mobile.svg" loading="eager" alt="Логотип" width="226" height="30">
+        </picture>
+      </a>
+    </div>
+
+    <!-- nav -->
+    <nav class="nav">
+
+      <!-- кнопка -  btn-burger -->
+      <!-- Стилизация кнопки и надписи в ней(при клике) через добавление\убирание в nav (при помощи JS) класса mobile-menu-open -->      
+      <div class="btn-burger">
+        <button class="btn-burger__btn" type="button">
+          <span class="btn-burger__text-open">Открыть меню</span>
+          <span class="btn-burger__text-close">Закрыть меню</span></button>
+      </div>
+
+      <!-- список ссылок - nav__box-list -->
+      <div class="nav__box-list">
+        <ul>
+          <li>
+            <a class="link-current" href="index.html">ГЛАВНАЯ</a>
+          </li>
+          <li>
+            <a href="#!">НАШИ РАБОТЫ</a>
+          </li>
+          <li>
+            <a href="#!">ЗАПИСАТЬСЯ</a>
+          </li>
+          <li>
+            <a href="#!">КОНТАКТЫ</a>
+          </li>
+          <li>
+            <a href="#!">HTML ACADEMY</a>
+          </li>
+        </ul>
+        <ul class="list-user">
+          <li>
+            <a href="#!">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <!-- opacity="0.3"  fill="white" -->
+                  <path d="M7 2H14V14H7V16H16V0H7V2Z" fill="none" />
+                  <path d="M7 9H0V7H7V4L11 8L7 12V9Z" fill="none" />
+                </g>
+              </svg>
+              <span>ВОЙТИ</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- main -->
+  <main class="main main-index">
+
+    <!-- statistics -->
+    <div class="box-stat-desing"> <!-- Фон и фоновое изображение -->
+      <section class="stat">
+        <header class="stat__header">
+          <h2 class="stat__title">Стрижка у нас<br> это выгодно!</h2>
+          <p class="stat__text">Мужская стрижка требует точного<br> подхода. Обратимся к статистике:</p>
+        </header>
+        <dl class="stat__list">
+          <div>          
+            <dt>рублей<br> вложений</dt>
+            <dd>1500<sup>*</sup></dd>
+          </div>
+          <div>
+            <dt>секунд<br> времени мастера</dt>
+            <dd>7 200</dd>          
+          </div>
+          <div>
+            <dt>постриженных<br> волос</dt>
+            <dd>90 000</dd>
+          </div>
+          <div>
+            <dt>лайков и<br> комплиментов</dt>
+            <dd>500 000<sup>*</sup></dd>
+          </div>
+        </dl>
+        <p class="stat__note">* — приведённые данные ложь</p>
+      </section>
+    </div>
+
+    <!-- flex-3 -->
+    <!-- <div class="flex-3 flex-3-desing">
+      <div class="flex-3__item flex-3__item-1"></div>
+      <div class="flex-3__item flex-3__item-2"></div>
+      <div class="flex-3__item flex-3__item-3"></div>
+    </div> -->
+
+    <!-- advantage -->
+    <section class="advant">
+      <h2 class="visually-hidden">Наши преймущества</h2>
+
+      <!-- pagination -->
+      <div class="advant__pagination">
+        <button class="advant__pagination-btn advant__pagination-btn-1 advant__pagination-btn-current" type="button">
+          <span class="visually-hidden">Преймущество-1</span>
+        </button>
+        <button class="advant__pagination-btn advant__pagination-btn-2" type="button">
+          <span class="visually-hidden">Преймущество-2</span>
+        </button>
+        <button class="advant__pagination-btn advant__pagination-btn-3" type="button">
+          <span class="visually-hidden">Преймущество-3</span>
+        </button>
+      </div>
+
+      <div class="flex-3">
+
+        <div class="flex-3__item flex-3__item-1">
+          <section class="advant__sect">
+            <h3 class="advant__subtitle">БЫСТРО</h3>
+            <p class="advant__text">Мы делаем свою работу быстро!<br class="br-mobile"><br class="br-desktop"> Два часа пролетят незаметно<br class="br-mobile"><br class="br-tiblet"><br class="br-desktop">
+            и вы — счастливый обладатель<br class="br-mobile"><br class="br-desktop"> стильной стрижки-минутки</p>
+          </section>
+        </div>
+
+        <div class="flex-3__item flex-3__item-2">
+          <section class="advant__sect">
+            <h3 class="advant__subtitle">КРУТО</h3>
+            <p class="advant__text">Забудьте, как вы стриглись<br class="br-mobile"><br class="br-desktop"> раньше. Мы сделаем из вас<br class="br-mobile"><br class="br-desktop"> звезду<br class="br-tiblet"> футбола или кино.<br class="br-mobile"><br class="br-desktop"> Во всяком случае внешне.</p>
+          </section>
+        </div>
+
+        <div class="flex-3__item flex-3__item-3">
+          <section class="advant__sect">
+            <h3 class="advant__subtitle">ДОРОГО</h3>
+            <p class="advant__text">Наши мастера — профессионалы<br class="br-mobile"><br class="br-desktop"> своего дела не могут стоить<br class="br-mobile"><br class="br-tiblet"><br class="br-desktop"> дёшево. К тому же, разве цена<br class="br-mobile"><br class="br-desktop"> не даёт определённый статус?</p>
+          </section>
+        </div>
+
+      </div>
+      
+    </section>
+
+    <!-- news -->
+    <section class="news news-desing-line">
+      <h2 class="news__title">НОВОСТИ И АКЦИИ</h2>
+
+
+      <!-- flex-3 -->
+    <div class="news-flex-3 flex-3">
+      <a class="news__text flex-3__item flex-3__item-1 news-desing-line" href="#!">
+        <span class="news__date">
+          <span class="news__number">29</span> 
+          <span class="news__month">СЕНТ</span>
+          <span class="visually-hidden">ЯБРЯ. </span>
+        </span>
+        Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.
+      </a>
+      <a class="news__text flex-3__item flex-3__item-2 news-desing-line" href="#!">
+        <span class="news__date">
+          <span class="news__number">19</span>
+          <span class="news__month">СЕНТ</span>
+          <span class="visually-hidden">ЯБРЯ. </span>
+        </span>
+        В нашей команде пополнение, Борис «Бритва» Стригунец, пополнил наши стройные ряды. Спешите записаться!
+      </a>
+      <a class="news__text flex-3__item flex-3__item-3 news-desing-line" href="#!">
+        <span class="news__date">
+          <span class="news__number">9</span>
+          <span class="news__month">СЕНТ</span>
+          <span class="visually-hidden">ЯБРЯ. </span>
+        </span>
+        Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!
+      </a>
+    </div>
+
+    <div class="news__box-link news-desing-line">
+      <a class="news__link" href="#!">ПОКАЗАТЬ ВСЕ</a>
+    </div>
+    </section>
+
+    <!-- Отзывы (reviews) -->
+    <section class="reviews">
+      <h2 class="reviews__title">ОТЗЫВЫ О НАС</h2>
+      <a class="reviews__link" href="#!">ОСТАВИТЬ СВОЙ</a>
+
+      <!-- reviews__sliders -->
+      <div class="reviews__sliders">
+        <p class="reviews__slider">
+          <img class="reviews__avatar" src="img/main/reviews/avatar/Barker/avatar.jpg" alt="Трэвис Баркер" width="249" height="160">
+          <span class="reviews__name">Трэвис Баркер</span>
+          <span class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</span>
+        </p>
+      </div>
+
+      <!-- reviews-btn-control -->
+      <button class="reviews__btn reviews__btn-next" type="button"><span class="visually-hidden">Листать отзывы вперед</span></button>
+      <button class="reviews__btn reviews__btn-back" type="button"><span class="visually-hidden">Листать отзывы назад</span></button>
+      <div class="reviews__box-pagination">
+        <button class="reviews__btn-pagination reviews__btn-pagination-current" type="button"><span class="visually-hidden">отзыв 1</span></button>
+        <button class="reviews__btn-pagination" type="button"><span class="visually-hidden">отзыв 2</span></button>
+        <button class="reviews__btn-pagination" type="button"><span class="visually-hidden">отзыв 3</span></button>
+      </div>
+    </section>
+
+
+    <!-- flex-3 -->
+    <!-- <div class="flex-3 flex-3-desing">
+          <div class="flex-3__item flex-3__item-1"></div>
+          <div class="flex-3__item flex-3__item-2"></div>
+          <div class="flex-3__item flex-3__item-3"></div>
+        </div> -->
+
+
+  </main>
+
+  <!-- footer -->
+  <footer class="footer">
+
+    <!-- Контакты -->
+    <section class="contacts">
+      <h2 class="contacts__title">Барбершоп Бородинский</h2>
+      <address class="contacts__address">
+        <a class="contacts__address-link contacts__link" href="#!">
+          г. Санкт-Петербург, ул. Большая<br> Конюшенная 19/8
+        </a>
+        <a class="contacts__address-tel contacts__link" href="tel:+78125556666">+7 (812) 555-66-66</a>
+      </address>
+    </section>
+
+    <!-- Соц. сети -->
+    <section class="social">
+      <h2 class="social__title visually-hidden">Давайте дружить!</h2>
+      <a class="social__link social__link-vk" href="#!"><span class="visually-hidden">ВКонтакте</span></a>
+      <a class="social__link social__link-fb" href="#!"><span class="visually-hidden">Facebook</span></a>
+      <a class="social__link social__link-inst" href="#!"><span class="visually-hidden">Instagram</span></a>
+    </section>
+
+    <!-- Разработчик -->
+    <section class="dev">
+      <h2 class="dev__title">Разработано:</h2>
+      <a class="dev__link" href="#!">HTML ACADEMY</a>
+    </section>
+
+  </footer>
+
+  
+  <script src="js/main.js"></script>
+</body>
+</html>
